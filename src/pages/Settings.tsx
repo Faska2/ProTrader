@@ -238,6 +238,125 @@ const Settings: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Developer Profile Section */}
+            <section className="card bg-gradient-to-br from-blue-500/5 to-purple-500/5 border-blue-500/20">
+                <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-blue-600">
+                    <span className="text-2xl">👨‍💻</span>
+                    {lang === 'en' ? 'About the Developer' : 'عن المطور'}
+                </h3>
+                
+                <div className="space-y-6">
+                    {/* Profile Header */}
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                            FE
+                        </div>
+                        <div className="flex-1">
+                            <h4 className="text-xl font-bold text-foreground">Faska El Ouaaziki</h4>
+                            <p className="text-blue-600 font-medium">Full Stack Developer</p>
+                            <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
+                                <span>📍</span> Agadir, Maroc
+                            </p>
+                        </div>
+                        <div className="px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-medium">
+                            ✅ {lang === 'en' ? 'Available for freelance' : 'متاح للعمل الحر'}
+                        </div>
+                    </div>
+
+                    {/* Bio */}
+                    <div className="p-4 bg-muted/50 rounded-xl">
+                        <p className="text-muted-foreground leading-relaxed">
+                            {lang === 'en' 
+                                ? "Passionate Full Stack Developer specializing in creating immersive and performant web and desktop applications. Focused on code quality and user experience."
+                                : "مطور Full Stack متحمس متخصص في إنشاء تطبيقات ويب و桌面 غامرة وعالية الأداء. يركز على جودة الكود وتجربة المستخدم."
+                            }
+                        </p>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <a 
+                            href="mailto:faska2002elouaaziki@gmail.com" 
+                            className="flex items-center gap-3 p-4 bg-muted rounded-xl hover:bg-muted/80 transition-colors"
+                        >
+                            <span className="text-xl">📧</span>
+                            <div className="flex-1 min-w-0">
+                                <p className="text-xs text-muted-foreground uppercase">Email</p>
+                                <p className="font-medium truncate text-sm">faska2002elouaaziki@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <a 
+                            href="tel:+212706217356" 
+                            className="flex items-center gap-3 p-4 bg-muted rounded-xl hover:bg-muted/80 transition-colors"
+                        >
+                            <span className="text-xl">📱</span>
+                            <div className="flex-1 min-w-0">
+                                <p className="text-xs text-muted-foreground uppercase">Phone</p>
+                                <p className="font-medium text-sm">+212 706-217356</p>
+                            </div>
+                        </a>
+
+                        <a 
+                            href="https://wa.me/212706217356" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 p-4 bg-green-500/10 rounded-xl hover:bg-green-500/20 transition-colors border border-green-500/20"
+                        >
+                            <span className="text-xl">💬</span>
+                            <div className="flex-1">
+                                <p className="text-xs text-green-600 uppercase">WhatsApp</p>
+                                <p className="font-medium text-green-700 text-sm">{lang === 'en' ? 'Chat on WhatsApp' : 'دردشة على واتساب'}</p>
+                            </div>
+                        </a>
+
+                        <a 
+                            href="https://www.linkedin.com/in/faska-el-ouaaziki-a3726b308" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 p-4 bg-blue-500/10 rounded-xl hover:bg-blue-500/20 transition-colors border border-blue-500/20"
+                        >
+                            <span className="text-xl">💼</span>
+                            <div className="flex-1">
+                                <p className="text-xs text-blue-600 uppercase">LinkedIn</p>
+                                <p className="font-medium text-blue-700 text-sm">Faska El Ouaaziki</p>
+                            </div>
+                        </a>
+
+                        <a 
+                            href="https://github.com/Faska2" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 p-4 bg-gray-500/10 rounded-xl hover:bg-gray-500/20 transition-colors border border-gray-500/20 md:col-span-2"
+                        >
+                            <span className="text-xl">🐙</span>
+                            <div className="flex-1">
+                                <p className="text-xs text-gray-600 uppercase">GitHub</p>
+                                <p className="font-medium text-gray-700 text-sm">github.com/Faska2</p>
+                            </div>
+                            <span className="text-sm text-muted-foreground">{lang === 'en' ? 'View Projects →' : 'عرض المشاريع →'}</span>
+                        </a>
+                    </div>
+
+                    {/* Copyright Notice */}
+                    <div className="pt-4 border-t border-border/50">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                            <div>
+                                <p className="font-bold text-foreground">ProTrade Journal</p>
+                                <p className="text-xs text-muted-foreground">© 2024 Faska El Ouaaziki. All rights reserved.</p>
+                            </div>
+                            <div className="px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-lg" dir="rtl">
+                                <p className="text-xs text-red-600 font-bold leading-relaxed">
+                                    ⚠️ يُمنع منعًا باتًا استخدام هذا التطبيق أو الاستفادة من خدماته دون الحصول على إذنٍ صريح من مالكه.
+                                    فاستعماله بغير حق يُعد تعدّيًا على حقوق الغير، وهو أمرٌ محرَّم شرعًا ومخالفٌ للأمانة.
+                                    وكل من يُقدِم على ذلك يتحمّل كامل المسؤولية أمام الله تعالى وأمام القانون.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }

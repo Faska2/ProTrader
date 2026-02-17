@@ -13,7 +13,9 @@ import {
     Globe,
     Moon,
     Sun,
-    Plus
+    Plus,
+    HelpCircle,
+    AlertTriangle
 } from 'lucide-react'
 import { clsx } from 'clsx'
 import { useStore, Trade } from '../store/useStore'
@@ -28,6 +30,7 @@ const navItems = [
     { icon: Brain, labelKey: 'psychology', path: '/psychology' },
     { icon: Target, labelKey: 'strategies', path: '/strategies' },
     { icon: SettingsIcon, labelKey: 'settings', path: '/settings' },
+    { icon: HelpCircle, labelKey: 'faq', path: '/faq' },
 ]
 
 export const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -96,6 +99,22 @@ export const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }
                         )
                     })}
                 </nav>
+
+                {/* Disclaimer Section - Important Notice */}
+                <div className="p-4 mx-4 mb-4 bg-red-500/10 border border-red-500/20 rounded-xl">
+                    <div className="flex items-start gap-2">
+                        <AlertTriangle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                        <div className="text-xs text-right" dir="rtl">
+                            <p className="font-bold text-red-600 mb-1">تنبيه مهم</p>
+                            <p className="text-red-500/80 leading-relaxed">
+                                يُمنع منعًا باتًا استخدام هذا التطبيق أو الاستفادة من خدماته دون الحصول على إذنٍ صريح من مالكه.
+                                فاستعماله بغير حق يُعد تعدّيًا على حقوق الغير، وهو أمرٌ محرَّم شرعًا ومخالفٌ للأمانة.
+                                وكل من يُقدِم على ذلك يتحمّل كامل المسؤولية أمام الله تعالى وأمام القانون.
+                                نسأل الله أن يرزقنا جميعًا الأمانة والالتزام بالحقوق.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
                 <div className="p-6 border-t border-border space-y-4 text-sm font-bold">
                     <div className="flex items-center justify-around">

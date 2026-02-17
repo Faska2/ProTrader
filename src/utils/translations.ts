@@ -77,7 +77,8 @@ export const translations = {
         emotionalStability: 'Stability',
         riskAdherence: 'Risk Adherence',
         mistakeFrequency: 'Mistake Freq',
-        performanceBySession: 'Performance by Session'
+        performanceBySession: 'Performance by Session',
+        faq: 'FAQ / Help'
     },
     ar: {
         dashboard: 'لوحة التحكم',
@@ -157,7 +158,8 @@ export const translations = {
         emotionalStability: 'الاستقرار النفسي',
         riskAdherence: 'الالتزام بالمخاطرة',
         mistakeFrequency: 'تكرار الأخطاء',
-        performanceBySession: 'الأداء حسب الجلسات'
+        performanceBySession: 'الأداء حسب الجلسات',
+        faq: 'الأسئلة الشائعة'
     }
 }
 

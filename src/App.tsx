@@ -16,6 +16,7 @@ const Psychology = React.lazy(() => import('./pages/Psychology'))
 const PsychologyAnalysis = React.lazy(() => import('./pages/PsychologyAnalysis'))
 const Strategies = React.lazy(() => import('./pages/Strategies'))
 const Settings = React.lazy(() => import('./pages/Settings'))
+const FAQ = React.lazy(() => import('./pages/FAQ'))
 
 const App: React.FC = () => {
   const { settings, fetchData, loading } = useStore()
@@ -56,6 +57,7 @@ const App: React.FC = () => {
               <Route path="/psychology/analysis" element={<PsychologyAnalysis />} />
               <Route path="/strategies" element={<Strategies />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/faq" element={<FAQ />} />
             </Routes>
           </React.Suspense>
         </MainLayout>
