@@ -1,0 +1,265 @@
+
+🧠 0) MASTER PROMPT (تعطيه للـ AI Agent قبل كلشي)
+استعمل هاد prompt فالبداية باش الAgent يفهم المشروع كامل:
+You are a senior full-stack desktop engineer and product architect.
+Build a professional desktop Trading Journal application using:
+- React (Vite)
+- Electron
+- TailwindCSS
+- Local JSON database (later scalable to SQLite)
+Architecture must be modular, scalable, and production-ready.
+
+The app must include:
+- Multi sessions journaling
+- Trade logging system
+- Advanced statistics dashboard
+- Psychology tracking
+- Strategy analytics
+- Navigation between pages
+- Persistent local JSON storage
+- Clean UI/UX with dark mode
+
+Follow best practices for folder structure, state management, reusable components, and performance.
+Act as a full product team:
+- Product manager
+- UI designer
+- Backend architect
+- Frontend engineer
+
+Build a complete Trading Journal desktop application step by step.
+For each step:
+1. Explain design decisions
+2. Generate code
+3. Connect modules
+4. Test with fake data
+5. Optimize performance
+
+
+
+⚙️ 1) Project Creation Prompt
+Create a desktop application using Electron + React + TailwindCSS.
+
+Steps:
+1. Initialize Vite React project
+2. Install TailwindCSS
+3. Setup Electron main process
+4. Configure IPC communication
+5. Create build scripts for Windows/Mac/Linux
+6. Provide folder structure for scalable architecture
+
+Use TypeScript if possible.
+
+
+📁 2) Folder Architecture Prompt
+Design a scalable folder structure for a Trading Journal desktop app.
+
+Include:
+- pages/
+- components/
+- layouts/
+- services/
+- store/
+- utils/
+- data/
+- electron/
+- assets/
+- hooks/
+
+Explain purpose of each folder.
+
+
+🧭 3) Routing & Navigation Prompt
+Implement page navigation using React Router inside Electron.
+
+Pages required:
+- Dashboard
+- Sessions
+- Trades
+- Analytics
+- Psychology
+- Strategies
+- Settings
+
+Create sidebar navigation UI using TailwindCSS.
+Persist current page state.
+
+
+🧾 4) JSON Local Database System Prompt
+Create a local JSON database system.
+
+Requirements:
+- JSON file stored locally
+- CRUD functions for trades, sessions, strategies
+- Electron IPC to read/write JSON securely
+- React service layer for data access
+- Auto-save and backup system
+
+Provide code for file read/write in Electron.
+
+
+📌 5) Sessions Page Prompt
+Create Sessions Management page.
+
+Features:
+- Create session (name, type, timezone)
+- List sessions
+- Delete / Edit session
+- Show session statistics summary
+- Link trades to sessions
+
+UI: cards with stats per session.
+
+
+💹 6) Trade Journal Page Prompt
+Create Trade Journal page.
+
+Trade form fields:
+- date, entry time, exit time
+- pair/symbol
+- buy/sell
+- entry price, SL, TP
+- risk %, lot size
+- RR planned, RR actual
+- pips SL, pips TP
+- result status (TP, SL, BE)
+- profit $
+- notes
+- emotions before/after
+- strategy
+- session
+- screenshot upload
+
+Display trades table with filters and search.
+
+
+📊 7) Dashboard Page Prompt
+Create Dashboard page.
+
+Show:
+- total trades
+- winrate
+- total profit
+- average RR
+- max drawdown
+- equity curve chart
+- trades by session chart
+- trades by pair chart
+
+Use chart library (Recharts or Chart.js).
+
+
+🧠 8) Psychology Page Prompt
+Create Psychology Analytics page.
+
+Features:
+- Emotion tracking per trade
+- Mistakes tags
+- Confidence score
+- Discipline score algorithm
+- Charts: winrate by emotion
+
+Provide UI sliders and tags system.
+
+
+🧩 9) Strategies Page Prompt
+Create Strategies Management page.
+
+Features:
+- Add strategy name & description
+- Assign trades to strategies
+- Strategy performance analytics
+- Best/worst strategy ranking
+
+
+📈 10) Analytics Page Prompt (Advanced)
+Create Advanced Analytics page.
+
+Include:
+- equity curve
+- drawdown curve
+- profit factor
+- expectancy
+- sharpe ratio
+- trades by hour heatmap
+- session performance table
+
+Compute stats from JSON data.
+
+
+⚙️ 11) Settings Page Prompt
+Create Settings page.
+
+Options:
+- dark/light mode
+- account balance initial
+- risk default %
+- export CSV/PDF
+- import trades CSV
+- backup JSON
+
+
+🔗 12) Global State Management Prompt
+Implement global state management.
+
+Use:
+- React Context or Zustand
+
+Store:
+- sessions
+- trades
+- strategies
+- settings
+- UI theme
+
+Ensure persistence with JSON sync.
+
+
+🧪 13) Fake Data Seed Prompt
+Generate realistic fake trading data JSON.
+
+Include:
+- multiple sessions
+- 200+ trades
+- multiple strategies
+- emotions
+- profit/loss values
+
+Use for testing analytics.
+
+
+🧠 14) AI Coach Module Prompt (Pro Feature)
+Create AI Coach logic module.
+
+Rules:
+- detect overtrading
+- detect bad sessions
+- detect best pairs
+- give text feedback tips
+
+Return suggestions in dashboard widget.
+
+
+🎨 15) UI/UX Design Prompt
+Design a professional trading dashboard UI.
+
+Style:
+- dark mode
+- TradingView inspired
+- TailwindCSS
+- sidebar layout
+- cards and charts
+
+Ensure fast data entry UX with keyboard shortcuts.
+
+
+🚀 16) Build & Packaging Prompt
+Configure Electron Builder.
+
+Build installers for:
+- Windows .exe
+- Mac .dmg
+- Linux AppImage
+
+Optimize bundle size and performance.
+
+
