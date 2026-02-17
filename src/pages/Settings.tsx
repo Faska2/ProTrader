@@ -269,7 +269,7 @@ const Settings: React.FC = () => {
                         <p className="text-muted-foreground leading-relaxed">
                             {lang === 'en' 
                                 ? "Passionate Full Stack Developer specializing in creating immersive and performant web and desktop applications. Focused on code quality and user experience."
-                                : "مطور Full Stack متحمس متخصص في إنشاء تطبيقات ويب و桌面 غامرة وعالية الأداء. يركز على جودة الكود وتجربة المستخدم."
+                                : "مطور Full Stack متحمس متخصص في إنشاء تطبيقات ويب وغامرة وعالية الأداء. يركز على جودة الكود وتجربة المستخدم."
                             }
                         </p>
                     </div>
@@ -339,19 +339,44 @@ const Settings: React.FC = () => {
                         </a>
                     </div>
 
+                    {/* Warning Button - Hover to see full message */}
+                    <div className="relative group">
+                        <button 
+                            className="w-full flex items-center justify-center gap-3 p-4 bg-red-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 hover:bg-red-700 transition-all transform hover:scale-[1.02]"
+                            dir="rtl"
+                        >
+                            <AlertTriangle className="w-6 h-6" />
+                            <span>⚠️ ضروري / تنبيه هام</span>
+                        </button>
+                        
+                        {/* Hover Tooltip - Full Message */}
+                        <div className="absolute bottom-full left-0 right-0 mb-2 p-6 bg-red-50 dark:bg-red-950 border-2 border-red-500 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" dir="rtl">
+                            <div className="flex items-start gap-3">
+                                <AlertTriangle className="w-8 h-8 text-red-600 shrink-0 mt-1" />
+                                <div className="text-right">
+                                    <h4 className="font-bold text-red-700 text-lg mb-3">تنبيه هام / تنبيه مهم</h4>
+                                    <p className="text-red-600 leading-loose text-base font-medium">
+                                        يُمنع منعًا باتًا استخدام هذا التطبيق أو الاستفادة من خدماته دون الحصول على إذنٍ صريح من مالكه.
+                                        <br /><br />
+                                        فاستعماله بغير حق يُعد تعدّيًا على حقوق الغير، وهو أمرٌ محرَّم شرعًا ومخالفٌ للأمانة.
+                                        <br /><br />
+                                        وكل من يُقدِم على ذلك يتحمّل كامل المسؤولية أمام الله تعالى وأمام القانون.
+                                        <br /><br />
+                                        <span className="font-bold text-red-800">نسأل الله أن يرزقنا جميعًا الأمانة والالتزام بالحقوق.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            {/* Arrow pointing down */}
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-red-50 dark:bg-red-950 border-r-2 border-b-2 border-red-500 rotate-45"></div>
+                        </div>
+                    </div>
+
                     {/* Copyright Notice */}
                     <div className="pt-4 border-t border-border/50">
                         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                             <div>
                                 <p className="font-bold text-foreground">ProTrade Journal</p>
                                 <p className="text-xs text-muted-foreground">© 2024 Faska El Ouaaziki. All rights reserved.</p>
-                            </div>
-                            <div className="px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-lg" dir="rtl">
-                                <p className="text-xs text-red-600 font-bold leading-relaxed">
-                                    ⚠️ يُمنع منعًا باتًا استخدام هذا التطبيق أو الاستفادة من خدماته دون الحصول على إذنٍ صريح من مالكه.
-                                    فاستعماله بغير حق يُعد تعدّيًا على حقوق الغير، وهو أمرٌ محرَّم شرعًا ومخالفٌ للأمانة.
-                                    وكل من يُقدِم على ذلك يتحمّل كامل المسؤولية أمام الله تعالى وأمام القانون.
-                                </p>
                             </div>
                         </div>
                     </div>

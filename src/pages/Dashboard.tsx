@@ -11,7 +11,7 @@ import {
     Pie,
     Cell
 } from 'recharts'
-import { TrendingUp, Target, Wallet, Brain, Layers, Activity } from 'lucide-react'
+import { TrendingUp, Target, Wallet, Brain, Layers, Activity, AlertTriangle } from 'lucide-react'
 import { useStore, Trade } from '../store/useStore'
 import { translations } from '../utils/translations'
 import { DashboardSkeleton } from '../components/Skeleton'
@@ -90,6 +90,22 @@ const Dashboard: React.FC = () => {
 
     return (
         <div className="space-y-8">
+            {/* Important Warning Banner - Visible on Dashboard Only */}
+            <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl" dir="rtl">
+                <div className="flex items-start gap-3">
+                    <AlertTriangle className="w-6 h-6 text-red-500 shrink-0 mt-0.5" />
+                    <div className="flex-1 text-right">
+                        <p className="font-bold text-red-600 mb-2 text-sm">⚠️ تنبيه هام</p>
+                        <p className="text-red-500/90 leading-relaxed text-xs">
+                            يُمنع منعًا باتًا استخدام هذا التطبيق أو الاستفادة من خدماته دون الحصول على إذنٍ صريح من مالكه.
+                            فاستعماله بغير حق يُعد تعدّيًا على حقوق الغير، وهو أمرٌ محرَّم شرعًا ومخالفٌ للأمانة.
+                            وكل من يُقدِم على ذلك يتحمّل كامل المسؤولية أمام الله تعالى وأمام القانون.
+                            نسأل الله أن يرزقنا جميعًا الأمانة والالتزام بالحقوق.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {mainStats.map((stat, index) => (
